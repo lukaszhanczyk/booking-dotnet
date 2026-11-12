@@ -1,9 +1,9 @@
 ﻿services:
-  booking:
-    image: booking
+  booking-api:
+    image: booking-api
     build:
       context: .
-      dockerfile: Booking/Dockerfile
+      dockerfile: src/Booking.Api/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__Default: "Host=db;Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
